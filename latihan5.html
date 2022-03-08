@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-if="itemInStock > 10">{{itemInStock}} in stock</p>
+        <p v-id="itemInStock > 0">Hurry up, only {{itemInStock}} items left</p>
+        <p v-else>Sorry, we are all out</p>
+    </div>
+
+    <script type="text/javascript">
+        var app = new Vue({ //mendeklarasikan vue
+            el: "#app",
+            data: { //menambahkan variabel yg ditampilkan
+                itemInStock: 12
+            }
+        })
+    </script>
+</body>
+</html>
